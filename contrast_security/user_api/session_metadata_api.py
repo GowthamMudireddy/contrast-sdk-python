@@ -34,3 +34,12 @@ class _SessionMetadataApi(_ApiSupport):
         path = 'organizations/{org_uuid}/applications/{app_id}/agent-sessions/{session_id}'.format(org_uuid=org_uuid, app_id=app_id, session_id=session_id)
         return self._get(path)
 
+    def filter_app_SbavRouteSession(self, org_uuid, limit=None, offset=None):
+        path = 'organizations/{org_uuid}/agent-sessions/sbav'.format(org_uuid=org_uuid)
+        # Prepare query parameters
+        params = {}
+        if limit is not None:
+            params['limit'] = limit
+        if offset is not None:
+            params['offset'] = offset
+        return self._post(path, params=params)
