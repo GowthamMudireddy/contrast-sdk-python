@@ -294,3 +294,4 @@ class ContrastSdk(object):
         self.filter_app_session_metadata_filter = self._session_metadata.filter_app_session_metadata_filter
         self.get_app_session_metadata_latest = self._session_metadata.get_app_session_metadata_latest
         self.get_app_session_metadata_sessionid = self._session_metadata.get_app_session_metadata_sessionid
+        self.filter_app_SbavRouteSession = self._session_metadata.filter_app_SbavRouteSession
